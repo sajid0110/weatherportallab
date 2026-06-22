@@ -1,65 +1,118 @@
 <?php
-require 'config.php';
+require __DIR__ . '/config.php';
 
-// নতুন ওয়েডার রিপোর্ট অ্যাড করার লজিক (CSRF টার্গেট ফর্ম)
+// নতুন ওয়েদার রিপোর্ট অ্যাড করার লজিক (CSRF টার্গেট ফর্ম)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // 🚨 2. CSRF Vulnerability: কোনো টোকেন চেক করা হচ্ছে না!
+    // 🚨 1. CSRF Vulnerability: কোনো অ্যান্টি-CSRF টোকেন চেক করা হচ্ছে না!
     $city = $_POST['city'] ?? '';
     $temp = $_POST['temp'] ?? '';
     $cond = $_POST['cond'] ?? '';
     
-    mysqli_query($conn, "INSERT INTO weather_reports (city_name, temperature, condition_text) VALUES ('$city', '$temp', '$cond')");
-    header("Location: index.php?msg=Report Added!");
+    // কেটে যাওয়া কুয়েরিটি এখানে ফিক্স করা হলো
+    $insertSql = "INSERT INTO weather_reports (city_name, temperature, condition_text, user_id) VALUES ('$city', '$temp', '$cond', 2)";
+    mysqli_query($conn, $insertSql);
+    
+    header("Location: index.php?msg=Report+Added+Successfully&type=success");
     exit;
 }
 
 $search = $_GET['search'] ?? '';
-// 🚨 3. SQL Injection in Search
-$sql = $search ? "SELECT * FROM weather_reports WHERE city_name LIKE '%$search%'" : "SELECT * FROM weather_reports";
+$msg = $_GET['msg'] ?? '';
+$msgType = $_GET['type'] ?? 'success';
+
+// 🚨 2. SQL Injection in Search: ইনপুট স্যানিটাইজ না করেই সরাসরি LIKE কুয়েরি
+if ($search !== '') {
+    $sql = "SELECT * FROM weather_reports WHERE city_name LIKE '%$search%'";
+} else {
+    $sql = "SELECT * FROM weather_reports ORDER BY id DESC";
+}
 $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
-<html>
-<head><title>Dashboard - Weather Portal</title></head>
-<body style="font-family: Arial; margin: 30px;">
-    <h1>🌦️ Weather Portal Dashboard</h1>
-    
-    <?php if($search): ?>
-        <h3>Search results for: <?php echo $search; ?></h3>
-    <?php endif; ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Weather Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.php">🌦️ Vulnerable Weather Portal</a></h1>
+            <nav>
+                <a href="index.php">Home</a>
+                <a href="profile.php">Profile</a>
+                <a href="login.php">Login</a>
+            </nav>
+        </div>
+    </header>
 
-    <form method="GET">
-        <input type="text" name="search" placeholder="Search city...">
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <?php if ($msg): ?>
+            <div class="alert alert-<?php echo $msgType === 'error' ? 'danger' : 'success'; ?>">
+                <?php echo htmlspecialchars($msg); ?>
+            </div>
+        <?php endif; ?>
 
-    <hr>
+        <div class="toolbar card">
+            <form method="GET" action="index.php" class="search-bar" style="width: 100%;">
+                <input type="text" name="search" placeholder="Search city (e.g., Dhaka)..." value="<?php echo $search; ?>">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
 
-    <h3>Current Weather Reports</h3>
-    <table border="1" cellpadding="10">
-        <tr><th>City</th><th>Temp</th><th>Condition</th></tr>
-        <?php while($row = mysqli_fetch_assoc($result)): ?>
-            <tr>
-                <td><?php echo $row['city_name']; ?></td>
-                <td><?php echo $row['temperature']; ?></td>
-                <td><?php echo $row['condition_text']; ?></td>
-            </tr>
-        <?php endwhile; ?>
-    </table>
+        <?php if ($search !== ''): ?>
+            <div style="margin-bottom: 20px;">
+                <h3>Search results for: <?php echo $search; ?></h3>
+            </div>
+        <?php endif; ?>
 
-    <hr>
+        <div class="card">
+            <h2>Current Weather Reports</h2>
+            <hr style="margin-bottom: 20px; border:0; border-top:1px solid #eee;">
+            
+            <?php if (mysqli_num_rows($result) > 0): ?>
+                <?php while($row = mysqli_fetch_assoc($result)): ?>
+                    <div class="post">
+                        <h3>📍 <?php echo htmlspecialchars($row['city_name']); ?></h3>
+                        <div class="content">
+                            <strong>Temperature:</strong> <?php echo htmlspecialchars($row['temperature']); ?><br>
+                            <strong>Condition:</strong> <?php echo $row['condition_text']; ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <div class="empty-state">No reports found.</div>
+            <?php endif; ?>
+        </div>
 
-    <h3>Add New Weather Report (Staff Only)</h3>
-    <form method="POST" action="index.php">
-        City: <input type="text" name="city" required><br><br>
-        Temp: <input type="text" name="temp" required><br><br>
-        Condition: <input type="text" name="cond" required><br><br>
-        <button type="submit">Submit Report</button>
-    </form>
+        <div class="card" style="max-width: 600px; margin-top: 30px;">
+            <h3>Add New Weather Report (Staff Only)</h3>
+            <p style="font-size: 0.85em; color: #e74c3c; margin-bottom: 15px; font-weight: bold;">
+                ⚠️ Lab Warning: This form lacks CSRF Tokens!
+            </p>
+            
+            <form method="POST" action="index.php">
+                <div class="form-group">
+                    <label>City Name</label>
+                    <input type="text" name="city" required placeholder="e.g., Sylhet">
+                </div>
+                <div class="form-group">
+                    <label>Temperature</label>
+                    <input type="text" name="temp" required placeholder="e.g., 28°C">
+                </div>
+                <div class="form-group">
+                    <label>Condition</label>
+                    <textarea name="cond" required placeholder="e.g., Heavy Rain" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit Report</button>
+            </form>
+        </div>
 
-    <p style="background:#fff3cd; padding:10px;">
-        <b>🎯 XSS Attack:</b> Search for <code>&lt;script&gt;alert(document.cookie)&lt;/script&gt;</code><br>
-        <b>🎯 CSRF Attack:</b> অন্য একটি লোকাল ফাইলে একটি ফেক ফর্ম বানিয়ে এই অ্যাকশনে (index.php) পোস্ট রিকোয়েস্ট পাঠান। সেশন অন থাকলে ব্যাকগ্রাউন্ডে ডাটা সাবমিট হয়ে যাবে।
-    </p>
+
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

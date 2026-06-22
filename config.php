@@ -11,8 +11,8 @@ ini_set('display_errors', 1);
 
 // এনভায়রনমেন্ট ভ্যারিয়েবল অথবা ডিফল্ট লোকালহোস্ট ভ্যালু সেটআপ
 $host = getenv('DB_HOST') ?: 'localhost';
-$user = getenv('DB_USER') ?: 'root';             // ল্যাবের জন্য ডিফল্ট 'root' রাখা হলো
-$pass = getenv('DB_PASS') ?: '';                 // XAMPP-এর ডিফল্ট পাসওয়ার্ড ফাঁকা থাকে
+$user = getenv('DB_USER') ?: 'shifat';             // ল্যাবের জন্য ডিফল্ট 'root' রাখা হলো
+$pass = getenv('DB_PASS') ?: 'sajid123';                 // XAMPP-এর ডিফল্ট পাসওয়ার্ড ফাঁকা থাকে
 $name = getenv('DB_NAME') ?: 'weather_portal';   // ডাটাবেজের নাম পরিবর্তন করে weather_portal করা হলো
 
 $conn = mysqli_connect($host, $user, $pass, $name);
