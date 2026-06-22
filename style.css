@@ -1,19 +1,127 @@
-body{
-    font-family:Arial,sans-serif;
-    margin:30px;
+/* 🌦️ Weather Portal Theme Style Code */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f4f7f9; /* হালকা ক্লাউডি বা স্কাই ব্যাকগ্রাউন্ড */
 }
 
-th,td{
-    border:1px solid #ddd;
-    padding:10px;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-a{
-    text-decoration:none;
-    padding:5px 10px;
+/* হেডার সেকশন - মেটিরিয়াল নেভি ব্লু */
+header {
+    background: #1e3799; 
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { 
+    font-size: 1.8em; 
+    font-weight: 700; 
+}
+
+header h1 a { 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+header nav a {
+    color: #dcdde1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+header nav a:hover { 
+    color: #fbc531; /* হোভারে সানশাইন ইয়োলো ইফেক্ট */ 
+}
+
+/* কার্ড লেআউট */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e1e8ed;
+}
+
+.card h2 { 
+    color: #1e3799; 
+    margin-bottom: 15px; 
+}
+
+/* ইনপুট ফর্ম ডিজাইন */
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"], /* পাসওয়ার্ড ফিল্ডের জন্য সাপোর্ট অ্যাড করা হলো */
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #2d3748;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4a69bd;
+}
+
+/* বাটনের স্টাইলসমূহ */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active { 
+    transform: scale(0.98); 
+}
+
+.btn-primary { background: #4a69bd; color: #fff; }
+.btn-primary:hover { background: #1e3799; }
+
+.btn-success { background: #2ecc71; color: #fff; }
+.btn-success:hover { background: #27ae60; }
+
+.btn-danger { background: #e74c

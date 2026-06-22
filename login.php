@@ -1,26 +1,35 @@
 <?php
-include 'config.php';
+require 'config.php';
+$error = '';
 
-if(isset($_POST['login'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+    // 🚨 1. SQL Injection Vulnerability (Direct concatenation)
+    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $result = mysqli_query($conn, $sql);
 
-$result = $conn->query(
-"SELECT * FROM users WHERE email='$email'"
-);
-
-$user = $result->fetch_assoc();
-
-if(password_verify($password,$user['password'])){
-    $_SESSION['user']=$user['username'];
-    header("Location:dashboard.php");
-}
+    if ($result && mysqli_num_rows($result) > 0) {
+        $_SESSION['username'] = $username;
+        header("Location: index.php");
+        exit;
+    } else {
+        $error = "Login Failed! Query: " . htmlspecialchars($sql);
+    }
 }
 ?>
-
-<form method="POST">
-<input name="email" type="email">
-<input name="password" type="password">
-<button name="login">Login</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head><title>Login - Weather Portal</title></head>
+<body style="font-family: Arial; margin: 40px;">
+    <h2>🌦️ Weather Portal - Staff Login</h2>
+    <?php if($error) echo "<p style='color:red;'>$error</p>"; ?>
+    <form method="POST">
+        Username: <input type="text" name="username" required><br><br>
+        Password: <input type="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p style="background:#eee; padding:10px;"><b>🎯 SQLi Attack:</b> Enter <code>admin' OR '1'='1</code> as username to bypass.</p>
+</body>
+</html>
