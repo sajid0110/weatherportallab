@@ -1,0 +1,210 @@
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 02:28:13
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 02:33:44
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 09:24:42
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 09:27:57
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 09:27:58
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 10:17:08
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:13:21
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:17:55
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:18:02
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:18:02
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:18:14
+Operator IP: ::1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Session Cookie: PHPSESSID=f0c8ca265cf2c2cf7761adf836829ecf
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-06-23 11:18:14
+Operator IP: ::1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Session Cookie: PHPSESSID=f0c8ca265cf2c2cf7761adf836829ecf
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:46:34
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:46:34
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:47:19
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:47:19
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:58:15
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 12:58:15
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:01:07
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:01:07
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:06:26
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:06:26
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:08:06
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 13:08:06
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 15:59:33
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-06 15:59:33
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=4e25ab3923770134d6c7f4050191994e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-07 06:16:23
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=a7218e1ac6d29a78f7a19c07c07921af
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-07 06:16:23
+Operator IP: 127.0.0.1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Session Cookie: PHPSESSID=a7218e1ac6d29a78f7a19c07c07921af
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-07 06:19:09
+Operator IP: ::1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Session Cookie: PHPSESSID=91369e863fba6ffa187c1c0d4f6e8d6e
+---------------------------------------
+
+--- 🎯 WEATHER PORTAL: STOLEN COOKIE ---
+Date: 2026-07-07 06:19:09
+Operator IP: ::1
+Browser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+Session Cookie: PHPSESSID=91369e863fba6ffa187c1c0d4f6e8d6e
+---------------------------------------
+

@@ -45,7 +45,7 @@ $user = mysqli_fetch_assoc($result);
             <nav>
                 <a href="index.php">Home</a>
                 <a href="create_report.php">New Report</a>
-                <a href="profile.php">Profile</a>
+                <a href="profil.php">Profile</a>
                 <a href="logout.php">Logout</a>
             </nav>
         </div>
@@ -56,8 +56,7 @@ $user = mysqli_fetch_assoc($result);
             <?php if ($msg): ?>
                 <div class="alert alert-<?php echo $msgType === 'error' ? 'danger' : 'success'; ?>">
                     <?php echo $msg; ?>
-                </div>
-            <?php endif; ?>
+                </div>            <?php endif; ?>
             
             <p><strong>Operator Username:</strong> <?php echo htmlspecialchars($user['username']); ?></p>
             <p><strong>Account ID:</strong> Station-#<?php echo $user['id']; ?></p>

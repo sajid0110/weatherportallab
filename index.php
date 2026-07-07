@@ -42,8 +42,10 @@ $result = mysqli_query($conn, $sql);
             <h1><a href="index.php">🌦️ Vulnerable Weather Portal</a></h1>
             <nav>
                 <a href="index.php">Home</a>
-                <a href="profile.php">Profile</a>
+                <a href="profil.php">Profile</a>
                 <a href="login.php">Login</a>
+<a href="edit.php">edit</a>
+<a href="change_email.php" style="color: #e94560; font-weight: bold;"> Update Email (CSRF Test)</a>
             </nav>
         </div>
     </header>
